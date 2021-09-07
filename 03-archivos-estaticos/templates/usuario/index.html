@@ -1,0 +1,18 @@
+<title>Inicio</title>
+
+{{ template "header" }}
+
+<h3>Hola {{ .UserName }}</h3>
+<p>Edad : {{ .Edad}}</p>
+
+
+<!--Variables-->
+
+{{ with $valor := "Mi variable" }}
+
+<p>{{ $valor }}</p>
+{{ end }}
+
+<img src="../../static/img/golang.png" alt="">
+
+{{ template "footer" }}
