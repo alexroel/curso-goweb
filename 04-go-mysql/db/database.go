@@ -47,9 +47,9 @@ func ExistsTable(tableName string) bool {
 }
 
 //Crear una tabla en la base de datos
-func CreateTable(schema string) {
+func CreateTable(schema, name string) {
 
-	if !ExistsTable("users") {
+	if !ExistsTable(name) {
 		_, err := db.Exec(schema)
 		if err != nil {
 			fmt.Println(err)
@@ -60,7 +60,7 @@ func CreateTable(schema string) {
 //Eliminara Tabla
 func TruncateTable(tableName string) {
 	sql := fmt.Sprintf("TRUNCATE %s", tableName)
-	Exec(sql)
+	db.Exec(sql)
 }
 
 //Polimorfismo a Exec

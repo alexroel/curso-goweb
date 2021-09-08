@@ -14,7 +14,7 @@ func main() {
 	fmt.Println(db.ExistsTable("users"))
 
 	//Clear tabla
-	db.CreateTable(models.UserSchema)
+	db.CreateTable(models.UserSchema, "users")
 	//db.TruncateTable("users")
 	//user := models.NewUser("roel", "roel123", "roel@gmail.com")
 	//fmt.Println(user)
