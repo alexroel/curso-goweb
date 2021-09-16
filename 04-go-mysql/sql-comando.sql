@@ -5,7 +5,7 @@ CREATE TABLE users(
     username VARCHAR(30) NOT NULL,
     password VARCHAR(64) NOT NULL,
     email VARCHAR(50),
-    create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 show tables like 'users';
